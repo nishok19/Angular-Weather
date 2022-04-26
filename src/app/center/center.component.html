@@ -1,0 +1,32 @@
+<div class="main-carousel">
+  <mat-carousel
+    [hideArrows]="false"
+    [hideIndicators]="false"
+    color="accent"
+    maxWidth="auto"
+    timings="250ms ease-in"
+    [proportion]="15"
+  >
+    <!-- [maintainAspectRatio]="false" -->
+    <mat-carousel-slide
+      class="main-carousel-slide"
+      *ngFor="let cd of carouselData"
+    >
+      <span class="slide-title">{{ cd.name }}</span>
+      <div class="slide-center">
+        {{ cd.weather[0].description }}
+      </div>
+      <div class="slide-center-left">
+        <div>Temp: {{ cd.main.temp }}℃</div>
+        <div>Max. Temp {{ cd.main.temp_max }}℃</div>
+        <div>Min. Temp {{ cd.main.temp_min }}℃</div>
+      </div>
+      <div class="slide-center-right">
+        <div>Wind: {{ cd.wind.speed }} km/h</div>
+        <div>Pressure: {{ cd.main.pressure }}</div>
+        <div>Humidity: {{ cd.main.humidity }}</div>
+      </div>
+      <div class="slide-bottom-right">Country: {{ cd.sys.country }}</div>
+    </mat-carousel-slide>
+  </mat-carousel>
+</div>

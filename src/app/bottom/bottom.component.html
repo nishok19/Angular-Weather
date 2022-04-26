@@ -1,0 +1,68 @@
+<div class="bottom">
+  <div class="bottom-search">
+    <mat-form-field class="bottom-input-field" color="primary">
+      <mat-label color="accent">Enter the name of a city</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="value"
+        placeholder="Enter the name of a city"
+        class="bottom-input"
+      />
+      <button
+        mat-button
+        *ngIf="value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="value = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <!-- <mat-form-field class="tp-full-width">
+      <input matInput placeholder="Favorite Food" value="Pasta" />
+    </mat-form-field> -->
+
+    <button mat-button (click)="searchPlace()">
+      <mat-icon aria-hidden="false" aria-label="search icon" class="search-icon"
+        >search</mat-icon
+      >
+    </button>
+  </div>
+
+  <div class="bottom-search-results">
+    <div class="bottom-search-results-title">
+      <div class="bottom-search-name">{{ data.name }}</div>
+      <div class="bottom-search-subName">{{ data.weather[0].description }}</div>
+    </div>
+    <div class="bottom-search-data">
+      <div class="bottom-search-center-data">
+        <div class="bottom-search-center-subData">
+          Temp: {{ data.main.temp }}
+        </div>
+        <div class="bottom-search-center-subData">
+          Max. Temp: {{ data.main.temp_max }}
+        </div>
+        <div class="bottom-search-center-subData">
+          Min. Temp: {{ data.main.temp_min }}
+        </div>
+      </div>
+      <div class="bottom-search-centerRight-data">
+        <div class="bottom-search-centerRight-subData">
+          Humidity: {{ data.main.humidity }}
+        </div>
+        <div class="bottom-search-centerRight-subData">
+          Pressure: {{ data.main.pressure }}
+        </div>
+        <div class="bottom-search-centerRight-subData">
+          Wind: {{ data.wind.speed }}
+        </div>
+        <div class="bottom-search-centerRight-subData">
+          Country: {{ data.sys.country }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

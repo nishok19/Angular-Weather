@@ -1,0 +1,41 @@
+<div class="main">
+  <div *ngFor="let tl of topList">
+    <!-- [style.backgroundColor]="'yellow'" -->
+    <mat-card class="main-card">
+      <mat-card-header class="main-card-header1">
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title [style.color]="'purple'"
+          ><u>{{ tl.name }}</u></mat-card-title
+        >
+        <mat-card-subtitle class="main-card-subtitle">{{
+          tl.weather[0].description
+        }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-header class="main-card-header2">
+        <mat-card-title>Temp</mat-card-title>
+        <mat-card-subtitle class="main-card-subtitle"
+          >{{ tl.main.temp }}℃</mat-card-subtitle
+        >
+      </mat-card-header>
+
+      <mat-card-content class="main-card-center">
+        <mat-card-content class="main-card-centerLeft">
+          <div>Pressure: {{ tl.main.pressure }}</div>
+          <div>Humidity: {{ tl.main.humidity }}</div>
+        </mat-card-content>
+
+        <mat-card-content class="main-card-centerRight">
+          <span>Max. Temp: {{ tl.main.temp_max }}℃</span>
+          <span>Min. Temp: {{ tl.main.temp_min }}℃</span>
+        </mat-card-content>
+      </mat-card-content>
+
+      <mat-card-footer class="main-card-footer">
+        <span>Rain: No</span>
+        <span [style.margin-left]="'150px'"
+          >Wind Speed: {{ tl.wind.speed }} km/hr</span
+        >
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

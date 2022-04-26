@@ -1,0 +1,61 @@
+.main-carousel {
+  margin: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  /* display: flex; */
+  /* flex: 0.3; */
+}
+
+:host ::ng-deep .carousel-slide-overlay {
+  background-image: radial-gradient(
+    rgba(86, 246, 238, 0.623) 5%,
+    rgba(86, 246, 238, 0.822) 15%,
+    rgba(86, 246, 238, 0.609) 60%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+:host ::ng-deep .carousel-slide-content {
+  font-size: x-large;
+  font-weight: 400;
+}
+
+:host ::ng-deep .slide-title {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+}
+
+:host ::ng-deep .slide-center {
+  font-size: x-large;
+  width: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 45%;
+}
+
+:host ::ng-deep .slide-center-left {
+  font-size: medium;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+
+:host ::ng-deep .slide-center-right {
+  font-size: medium;
+  width: fit-content;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+}
+
+.slide-bottom-right {
+  width: fit-content;
+  font-size: small;
+  position: absolute;
+  top: 80%;
+  right: 5%;
+}

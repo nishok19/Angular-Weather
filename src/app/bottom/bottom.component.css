@@ -1,0 +1,89 @@
+.bottom {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  /* flex: 0.33; */
+  height: 30vh;
+  justify-content: center;
+}
+
+.bottom-search {
+  /* margin-left: 50px; */
+  height: fit-content;
+  margin-top: 4em;
+  /* background-color: bisque; */
+}
+
+.bottom-input-field {
+  width: 200px;
+}
+
+.search-icon {
+  vertical-align: middle;
+}
+
+.bottom-search-results {
+  display: flex;
+}
+
+.bottom-search-results-title {
+  margin: 1em;
+  width: 100%;
+}
+
+.bottom-search-name {
+  height: fit-content;
+  margin-top: 2em;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.bottom-search-subName {
+  margin: 1em;
+  font-size: small;
+  text-align: center;
+}
+
+.bottom-search-center-data {
+  display: flex;
+  margin: 1em;
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+}
+
+.bottom-search-center-subData {
+  margin: 2em;
+  width: max-content;
+}
+
+.bottom-search-centerRight-data {
+  display: flex;
+  width: fit-content;
+  margin: 1em;
+  height: fit-content;
+}
+
+.bottom-search-centerRight-subData {
+  margin: 2em;
+  width: max-content;
+}
+
+::ng-deep .mat-form-field-underline {
+  /*change color of underline*/
+  background-color: green !important;
+}
+
+::ng-deep .mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: green !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: green !important;
+}
+
+::ng-deep .ng-star-inserted {
+  color: green;
+}
